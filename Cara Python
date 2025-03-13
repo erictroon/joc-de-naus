@@ -1,0 +1,35 @@
+
+import pygame
+import pygame, sys
+from pygame.locals import *
+
+AMPLE = 600
+ALT = 600
+TAMANY = (AMPLE,ALT)
+NEGRE = (0,0,0)
+VERMELL = (255,0,0,0)
+BLANC = (255,255,255)
+ROSA = (255,233,169)
+ROSABOCA = (234,137,154)
+pygame.init()
+pantalla = pygame.display.set_mode(TAMANY)
+pygame.display.set_caption('Rectangle')
+while True: # main game loop
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    pantalla.fill(BLANC)
+    pygame.draw.circle(pantalla, ROSA, (300, 300), 200)
+    pygame.draw.circle(pantalla, BLANC, (200, 250), 50)
+    pygame.draw.circle(pantalla, BLANC, (400, 250), 50)
+    pygame.draw.circle(pantalla, NEGRE, (200, 250), 10)
+    pygame.draw.circle(pantalla, NEGRE, (400, 250), 10)
+    pygame.draw.ellipse(pantalla, VERMELL, (250, 300, 100, 50))
+    pygame.draw.ellipse(pantalla, BLANC, (250, 400, 100, 50))
+    pygame.draw.ellipse(pantalla, ROSABOCA, (250, 400, 100, 50))
+    pygame.draw.rect(pantalla, BLANC, (260, 425, 25, 20),)
+    pygame.draw.ellipse(pantalla, NEGRE, (250, 400, 100, 50),4)
+
+    pygame.display.update()
